@@ -3,3 +3,4 @@ Customized Python CLI Script built on [LevPasha's / Instagram-API-python]
 
 Required files
 - credentials.json
+- client_secrets.json
