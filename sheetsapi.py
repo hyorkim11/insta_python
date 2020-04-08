@@ -19,9 +19,9 @@ def sheets_setup():
 	service = build('sheets', 'v4', http=creds.authorize(Http()))
 
 # Call the Sheets API
-	SPREADSHEET_ID = '1kblFk0ApeTzCIxTmksD8kmItaewMoCBNANDfQ3nbh6U'
-	RANGE_NAME = 'Account!G2:H'
-	# WARNING: ID & PASSWORD MUST RESIDE IN COLUMNS 'G' and 'H'
+	SPREADSHEET_ID = '' #INSERT KEY HERE
+	RANGE_NAME = '' # DEFINE SHEETS COLUMNS
+	# WARNING: ID & PASSWORD MUST RESIDE IN COLUMNS
 	#          AS DEFINED ABOVE
 	result = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID,
 	                                             range=RANGE_NAME).execute()

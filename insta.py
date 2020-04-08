@@ -14,30 +14,6 @@ import argparse
 import shutil
 
 
-'''###################################
-TODO:
-Optimize code structure for every command
-
-since i have the login-roster
-structure the program like the following:
-1. check if roster exists
-2. give choices to log in as any one of them
-3. depending on the ID, have a separate folder to put their image files
-4. script goes down the list and logs in each account, checks respective folder for images
-5. determines if its a single photo/album and uploads
-
-NOTES:
-- 'zip' library for multi-simultaneous iteration over lists for acc/pwd lists
-- test uploading video as part of album (code piece at EOF)
-- 'curses' library for interactivity
-- 'tkinter' library for GUI
-- 'py2app' library to create standalone mac app from python project
-- 'crontab' library for cronjobs
-- 'pillow' library for adding logos to images
-https://docs.eyesopen.com/toolkits/cookbook/python/image-manipulation/addlogo.html
-
-###################################'''
-
 # DEFINE GLOBALS  ###########
 # Batch image file names
 batchList = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"]
@@ -167,11 +143,7 @@ while(1):
 					unique_caption+= account_caption
 					print("WARNING: Uploading 1.mp4 and 1.jpg to: "+ username + "'s account\n Y/N")
 					ans = input()
-					# media = {
-					# 	'type':'video',
-					# 	'file':'1.mp4',
-					# 	'thumbnail':'1.jpg'
-					# }
+					
 					if (ans == "Y" or "y"):
 						api.uploadVideo("1.mp4", "1.jpg", caption=unique_caption)
 						print("Video upload success!")
